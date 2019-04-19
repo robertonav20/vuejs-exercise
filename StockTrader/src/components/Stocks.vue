@@ -3,7 +3,7 @@
     <div class="header">
       <h5 class="font-weight-bold">Stocks</h5>
     </div>
-    <div class="body d-flex flex-row">
+    <div class="body">
       <div class="card">
         <div class="card-header">Car</div>
         <div class="card-body">
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="body d-flex flex-row">
+    <div class="body">
       <div class="card">
         <div class="card-header">Food</div>
         <div class="card-body">
@@ -94,7 +94,7 @@
         <div class="card-header">Food</div>
         <div class="card-body">
           <h5 class="card-title">Cassata</h5>
-          <p class="card-text">Fiat auto buy it!</p>
+          <p class="card-text">Buy it!</p>
         </div>
         <div class="card-footer">
           <div class="d-flex flex-row">
@@ -137,11 +137,14 @@ export default {
 
   .jumbotron {
     text-align: left;
-    .header{
-      background-color: tomato;
-    }
-    .body{
-      background-color: red;
-    }
+  }
+  .header{
+    background-color: tomato;
+  }
+
+  .body{
+    flex-flow: row wrap;
+    display: flex;
+    flex-direction: row;
   }
 </style>
