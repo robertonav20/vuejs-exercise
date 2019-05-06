@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomePage from '@/components/HomePage'
 import NotFound from '@/components/NotFound'
-import Portfolio from '@/components/Portfolio'
-import Stocks from '@/components/Stocks'
+import Portfolios from '@/components/portfolio/Portfolios'
+import Stocks from '@/components/stocks/Stocks'
 
 Vue.use(Router)
 
-export default new Router({
+export const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -21,9 +21,9 @@ export default new Router({
       component: HomePage
     },
     {
-      path: '/Portfolio',
-      name: 'Portfolio',
-      component: Portfolio
+      path: '/Portfolios',
+      name: 'Portfolios',
+      component: Portfolios
     },
     {
       path: '/Stocks',
