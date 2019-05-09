@@ -1,15 +1,14 @@
 <template>
   <div class="main">
     <h1>{{ msg }}</h1>
-    <span>Store A : {{ varA }}</span>
-    <span>Store B : {{ varB }}</span>
-    <app-child @incrementA="incrementA" @incrementB="incrementB"></app-child>
+    <span>Store A : {{ cData.variables.a }}</span>
+    <span>Store B : {{ cData.variables.b }}</span>
+    <app-child :data="cData" ><!--@incrementA="incrementA" @incrementB="incrementB"--></app-child>
   </div>
 </template>
 
 <script>
 import ChildComponent from './ChildComponent'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'mainComponent',
@@ -22,10 +21,9 @@ export default {
     appChild: ChildComponent
   },
   computed: {
-    ...mapGetters({
-      varA: 'getA',
-      varB: 'getB'
-    })
+    cData () {
+      return this.$store.getters.getData
+    }
   },
   methods: {
     incrementA (val) {
