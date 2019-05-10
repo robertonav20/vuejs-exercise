@@ -22,6 +22,9 @@ export default {
   },
   computed: {
     cData () {
+      let ob = Object.freeze(this.$store.getters.getData)
+      // Observer.disconnect(ob)
+      console.log(ob)
       return this.$store.getters.getData
     }
   },
