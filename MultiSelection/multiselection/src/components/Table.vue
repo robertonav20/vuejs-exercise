@@ -80,7 +80,7 @@
     methods: {
       checkboxSelected(i) {
         this.multipleSelection.forEach((e, index) => {
-          this.multipleSelection[index] = i === index;
+          this.multipleSelection[index] = (i === index ? !this.multipleSelection[index] : false );
         });
       }
     }
